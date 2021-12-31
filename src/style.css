@@ -1,0 +1,244 @@
+:root {
+  --primary: #f67356;
+  /* --primary: #ffc400; */
+  --secondary: #0070f3;
+
+  --primary-1: #ca4246;
+  --primary-2: #e16541;
+  --primary-3: #e16541;
+  --primary-4: #f18f43;
+  --primary-5: #f18f43;
+  --primary-6: #8b9862;
+  --primary-7: #8b9862;
+  --primary-8: #476098;
+  --primary-9: #476098;
+  --primary-10: #a7489b;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #020101;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  color: var(--primary);
+  background: #130906;
+  padding: 1rem;
+  font-size: 8rem;
+  border-radius: 2rem;
+  margin: 0;
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+button {
+  color: #130906;
+  background: var(--primary);
+
+  font-size: 1.6rem;
+  font-weight: 900;
+  border-radius: 2rem;
+  border: transparent;
+  z-index: 100;
+  width: 8rem;
+  height: 2.5rem;
+}
+
+button:nth-of-type(1) {
+  transform: translateY(1.5rem) translateX(0rem);
+}
+button:nth-of-type(2) {
+  transform: translateY(-1.5rem) translateX(0rem);
+}
+
+.gradient-text {
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #f7c110, #f67356, #f65679);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.conic-gradient-text {
+  background: #ca4246;
+  background-color: #ca4246;
+  background: conic-gradient(
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+
+  /* Set thee background size and repeat properties. */
+  background-size: 80%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: conic-gradient-animation-rev 0.5s ease forwards;
+
+  /* border: 0.2rem solid #fff; */
+
+  padding: 0.4em;
+
+  cursor: pointer;
+}
+.conic-gradient {
+  background: #ca4246;
+  background-color: #ca4246;
+  background: conic-gradient(
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+
+  /* Set thee background size and repeat properties. */
+  background-size: 80%;
+  background-repeat: repeat;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: conic-gradient-animation-rev 0.5s ease forwards;
+
+  /* border: 0.2rem solid #fff; */
+
+  cursor: pointer;
+}
+
+.conic-gradient:hover {
+  animation: conic-gradient-animation 0.5s ease forwards;
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes conic-gradient-animation {
+  0% {
+    background-size: 80%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 90%;
+    background-position: 2 0em;
+  }
+  100% {
+    background-size: 100%;
+    background-position: 1em 1em;
+  }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes conic-gradient-animation-rev {
+  0% {
+    background-size: 100%;
+    background-position: 1em 1em;
+  }
+  20% {
+    background-size: 90%;
+    background-position: 2 0em;
+  }
+  100% {
+    background-size: 80%;
+    background-position: 0 0;
+  }
+}
+
+.card {
+  background-color: #130906;
+  color: var(--primary);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem var(--primary-1), 0 0 0.2rem var(--primary-2),
+    0 0 2rem var(--primary-3), 0 0 0.8rem var(--primary-4),
+    0 0 2.8rem var(--primary-5), inset 0 0 1.3rem var(--primary-6);
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+
+.grand-child {
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    box-shadow: 0 0 4px var(--primary-1), 0 0 11px var(--primary-2),
+      0 0 19px var(--primary-3), 0 0 40px var(--primary-4),
+      0 0 80px var(--primary-5), 0 0 90px var(--primary-6),
+      0 0 100px var(--primary-7), 0 0 110px var(--primary-8),
+      0 0 120px var(--primary-9), 0 0 150px var(--primary-10);
+  }
+  0% {
+    /* A slightly smaller blur radius */
+    box-shadow: 0 0 4px var(--primary-1), 0 0 10px var(--primary-2),
+      0 0 18px var(--primary-3), 0 0 38px var(--primary-4),
+      0 0 73px var(--primary-5), 0 0 80px var(--primary-6),
+      0 0 94px var(--primary-7), 0 0 112px var(--primary-8),
+      0 0 118px var(--primary-9), 0 0 148px var(--primary-10);
+  }
+}
